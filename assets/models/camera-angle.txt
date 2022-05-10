@@ -1,0 +1,7 @@
+camera-orbit="0deg 75deg auto"
+
+camera-orbit="-17deg 75deg auto"
+
+camera-orbit="25deg 75deg auto"
+
+camera-orbit="-20deg 75deg auto"

@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.popup_gdpr {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    background-color: #f3aeb6;
+    margin: 0;
+    display: none;
+}
+
+.popup_gdpr_show {
+    display: flex;
+}
+
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.cookies_logo img {
+    width: 5vw;
+}
+
+.cookies_text p {
+    font-size: clamp(16px, 3vw, 35px);
+    /* padding: 2%; */
+    /* font-size: 1rem; */
+    color: rgb(49, 49, 49);
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin: 0;
+}
+
+.cookies_btn {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.accept_btn {
+    background-color: #248406;
+    color: white;
+    border-radius: 15px;
+}
+
+.accept_btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.decline {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+
+/* Popup css */
+
+body {
+    font-family: "Roboto";
+}
+
+.popup-trigger {
+    display: block;
+    width: 170px;
+    right: 2rem;
+    margin: 3em auto;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50em;
+    background: #35a785;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.07);
+    transition: 300ms all;
+}
+
+.popup-trigger:hover {
+    opacity: 0.8;
+}
+
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+    width: 100%;
+    background-color: rgba(94, 110, 141, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: 500ms all;
+    /* Custom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transition: 1s all;
+}
+
+.popup-container {
+    transform: translateY(-50%);
+    transition: 500ms all;
+    position: relative;
+    /* width: 80%; */
+    margin: 2em auto;
+    /* top: 5%; */
+    padding: 4em 2em;
+    background: #fff;
+    border-radius: 0.25em 0.25em 0.4em 0.4em;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    /* Custom */
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.is-visible .popup-container {
+    transform: translateY(0);
+    transition: 500ms all;
+}
+
+.popup-container .popup-close {
+    position: absolute;
+    top: 8px;
+    font-size: 0;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+}
+
+.popup-container .popup-close::before,
+.popup-container .popup-close::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    width: 14px;
+    height: 3px;
+    background-color: #8f9cb5;
+}
+
+.popup-container .popup-close::before {
+    transform: rotate(45deg);
+    left: 8px;
+}
+
+.popup-container .popup-close::after {
+    transform: rotate(-45deg);
+    right: 8px;
+}
+
+.popup-container .popup-close:hover:before,
+.popup-container .popup-close:hover:after {
+    background-color: #35a785;
+    transition: 300ms all;
+}
+
+.instruction_container p {
+    /* margin-bottom: 20px; */
+    font-size: 14px;
+    font-weight: 400;
+    color: #5b5b5b;
+}
+
+.popup_logo {
+    /* height: 30px; */
+    width: 3rem;
+    max-width: 100%;
+    /* display: block; */
+    height: auto;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+    .cookies_text p {
+        padding: 2%;
+    }
+    .cookies_logo img {
+        width: 6vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cookies_logo img {
+        width: 10vw;
+    }
+    .instruction_container p {
+        /* margin-bottom: 20px; */
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .popup_logo {
+        /* height: 30px; */
+        width: 1.8em;
+        max-width: 100%;
+        /* display: block; */
+        height: auto;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .instruction_container p {
+        /* margin-bottom: 20px; */
+        font-size: 11px;
+        font-weight: 400;
+    }
+    .popup_logo {
+        /* height: 30px; */
+        width: 1.5em;
+        max-width: 100%;
+        /* display: block; */
+        height: auto;
+        margin: 10px;
+    }
+    .header h2 {
+        font-size: 2rem !important;
+    }
+}
