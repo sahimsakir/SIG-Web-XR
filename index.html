@@ -150,9 +150,11 @@
             <button slot="hotspot-video" class="hotspot" data-position="-0.003m 0.15m 0.02m"
                 data-normal="0.77m 0.64m 0.08m" data-visibility-attribute="visible" onclick="lightbox_open();">
             </button>
-            <button slot="hotspot-annotation" onclick="display_annotation();" class="hotspot"
-                data-position="0.120m 0.17m 0.02m" data-normal="0.77m 0.64m -0.08m" data-visibility-attribute="visible">
-                <span id="annotation">This is for test</span>
+            <button slot="hotspot-annotation" id="hotspot-annotation" onclick="display_annotation();" class="hotspot"
+                data-position="0.025m 0.175m 0.02m" data-normal="0.77m 0.64m -0.08m"
+                data-visibility-attribute="visible">
+                <img src="/assets/img/click-me.gif" alt="">
+                <span id="annotation"><img src="/assets/img/D3.png" alt=""></span>
             </button>
 
 
@@ -275,7 +277,7 @@
 
         function display_annotation() {
             console.log('annotation')
-            document.querySelector('#annotation').style.display = "block";
+            document.querySelector('#annotation').style.display = "flex";
         }
         function switchSrc(index) {
             console.log(index);
@@ -286,6 +288,11 @@
             arNvisio.angels = card_src[index].angles;
             arNvisio.alt = card_src[index].alt;
             document.querySelector('.title').innerHTML = card_src[index].title;
+            if (index == 1) {
+                console.log('i am 1');
+                document.querySelector('#hotspot-annotation').style.display = "block";
+
+            }
         }
 
     </script>
