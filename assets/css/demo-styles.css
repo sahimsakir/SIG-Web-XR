@@ -298,7 +298,7 @@ footer {
 
 .hotspot {
     position: relative;
-    background: transparent;
+    background: darkblue;
     border-radius: 32px;
     box-sizing: border-box;
     border: 0;
@@ -316,17 +316,17 @@ footer {
     outline: none;
 }
 
-.hotspot>* {
+/* .hotspot>* {
     transform: translateY(-50%);
     opacity: 1;
-}
+} */
 
-.hotspot:not([data-visible])>* {
+/* .hotspot:not([data-visible])>* {
     pointer-events: none;
     opacity: 0;
     transform: translateY(calc(-50% + 4px));
     transition: transform 0.3s, opacity 0.3s;
-}
+} */
 
 :not(:defined)>* {
     display: none;
