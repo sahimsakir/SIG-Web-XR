@@ -150,8 +150,10 @@
             <button slot="hotspot-video" class="hotspot" data-position="-0.003m 0.15m 0.02m"
                 data-normal="0.77m 0.64m 0.08m" data-visibility-attribute="visible" onclick="lightbox_open();">
             </button>
-            <!-- <button data-position="0.009m 0.14m 0.02m" data-normal="0.77m 0.64m -0.08m"
-                data-visibility-attribute="visible" href="#" onclick="lightbox_open();">test</button> -->
+            <button slot="hotspot-annotation" onclick="display_annotation();" class="hotspot"
+                data-position="0.120m 0.17m 0.02m" data-normal="0.77m 0.64m -0.08m" data-visibility-attribute="visible">
+                <span id="annotation">This is for test</span>
+            </button>
 
 
         </ar-nvisio>
@@ -269,6 +271,11 @@
         function displayMenu() {
             console.log('ar-menu')
             document.querySelector('.nav-menu').style.display = "flex";
+        }
+
+        function display_annotation() {
+            console.log('annotation')
+            document.querySelector('#annotation').style.display = "block";
         }
         function switchSrc(index) {
             console.log(index);
