@@ -332,6 +332,10 @@ footer {
     animation-duration: 0.4s;
 }
 
+#annotation.active {
+    display: flex;
+}
+
 #annotation img {
     width: 100%;
     border-radius: 50%;

@@ -151,8 +151,7 @@
                 data-normal="0.77m 0.64m 0.08m" data-visibility-attribute="visible" onclick="lightbox_open();">
             </button>
             <button slot="hotspot-annotation" id="hotspot-annotation" onclick="display_annotation();" class="hotspot"
-                data-position="0.025m 0.175m 0.02m" data-normal="0.77m 0.64m -0.08m"
-                data-visibility-attribute="visible">
+                data-position="0.025m 0.175m 0.02m" data-normal="0.77m 0.64m 0.70m" data-visibility-attribute="visible">
                 <img src="/assets/img/click-me.gif" alt="">
                 <span id="annotation"><img src="/assets/img/D3.png" alt=""></span>
             </button>
@@ -277,7 +276,7 @@
 
         function display_annotation() {
             console.log('annotation')
-            document.querySelector('#annotation').style.display = "flex";
+            document.querySelector('#annotation').classList.toggle('active');
         }
         function switchSrc(index) {
             console.log(index);
@@ -291,7 +290,9 @@
             if (index == 1) {
                 console.log('i am 1');
                 document.querySelector('#hotspot-annotation').style.display = "block";
-
+            }
+            else {
+                document.querySelector('#hotspot-annotation').style.display = "none";
             }
         }
 
